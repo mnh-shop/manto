@@ -11,11 +11,11 @@ const ProductCard = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="bg-manto-black rounded-2xl border border-manto-border overflow-hidden animate-pulse">
-        <div className="aspect-square bg-manto-dark" />
+      <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden animate-pulse">
+        <div className="aspect-square bg-gray-100" />
         <div className="p-4 space-y-2">
-          <div className="h-4 bg-manto-dark rounded" />
-          <div className="h-3 bg-manto-dark rounded w-3/4" />
+          <div className="h-4 bg-gray-100 rounded" />
+          <div className="h-3 bg-gray-100 rounded w-3/4" />
         </div>
       </div>
     ),
@@ -26,12 +26,12 @@ export function FeaturedProducts() {
   const featured = products.filter((p) => p.badge).slice(0, 4);
 
   return (
-    <section className="py-20 bg-manto-black">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between mb-12">
           <div>
-            <h2 className="text-3xl font-bold text-manto-white">Trending Now</h2>
-            <p className="text-manto-gray mt-2">Our best-selling skincare tools & products</p>
+            <h2 className="text-3xl font-bold text-black">Trending Now</h2>
+            <p className="text-gray-600 mt-2">Our best-selling skincare tools & products</p>
           </div>
           <Link href="/products" className="hidden sm:block">
             <Button variant="ghost">

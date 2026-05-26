@@ -17,7 +17,7 @@ export function ProductCard({ product }: ProductCardProps) {
   const addItem = useCartStore((state) => state.addItem);
 
   return (
-    <div className="group relative bg-manto-card rounded-2xl border border-manto-border overflow-hidden hover:shadow-lg hover:shadow-glow-charcoal/5 transition-all duration-300">
+    <div className="group relative bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg hover:shadow-gray-500/5 transition-all duration-300">
       {/* Image */}
       <Link href={`/products/${product.slug}`} className="block relative aspect-square overflow-hidden">
         <Image
@@ -36,14 +36,14 @@ export function ProductCard({ product }: ProductCardProps) {
       {/* Content */}
       <div className="p-4 space-y-3">
         <Link href={`/products/${product.slug}`}>
-          <h3 className="font-semibold text-manto-white hover:text-manto-neon transition-colors line-clamp-2">
+          <h3 className="font-semibold text-black hover:text-manto-neon transition-colors line-clamp-2">
             {product.name}
           </h3>
         </Link>
-        <p className="text-sm text-manto-gray line-clamp-2">{product.description}</p>
+        <p className="text-sm text-gray-600 line-clamp-2">{product.description}</p>
 
         <div className="flex items-center justify-between pt-1">
-          <span className="text-lg font-bold text-manto-white">
+          <span className="text-lg font-bold text-black">
             ${product.price.toFixed(2)}
           </span>
           <button
@@ -54,7 +54,7 @@ export function ProductCard({ product }: ProductCardProps) {
               price: product.price,
               image: product.images[0],
             })}
-            className="p-2.5 rounded-xl bg-manto-neon text-white hover:bg-manto-neon hover:text-manto-white transition-all duration-200 active:scale-95"
+            className="p-2.5 rounded-xl bg-yellow-400 text-black hover:bg-yellow-400 hover:text-black transition-all duration-200 active:scale-95"
           >
             <ShoppingBag className="w-4 h-4" />
           </button>

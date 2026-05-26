@@ -8,11 +8,11 @@ const ProductCard = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="bg-manto-card rounded-2xl border border-manto-border overflow-hidden animate-pulse">
-        <div className="aspect-square bg-manto-card" />
+      <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden animate-pulse">
+        <div className="aspect-square bg-white" />
         <div className="p-4 space-y-2">
-          <div className="h-4 bg-manto-card rounded" />
-          <div className="h-3 bg-manto-card rounded w-3/4" />
+          <div className="h-4 bg-white rounded" />
+          <div className="h-3 bg-white rounded w-3/4" />
         </div>
       </div>
     ),
@@ -28,7 +28,7 @@ export function RelatedProducts({ products }: RelatedProductsProps) {
 
   return (
     <div className="mt-20">
-      <h2 className="text-2xl font-bold text-manto-white mb-6">You May Also Like</h2>
+      <h2 className="text-2xl font-bold text-black mb-6">You May Also Like</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {products.map((p) => (
           <ProductCard key={p.id} product={p} />

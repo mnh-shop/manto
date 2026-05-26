@@ -17,15 +17,15 @@ export default function FAQPage() {
   const [open, setOpen] = useState<number | null>(null);
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-bold text-manto-white mb-8">Frequently Asked Questions</h1>
+      <h1 className="text-4xl font-bold text-black mb-8">Frequently Asked Questions</h1>
       <div className="space-y-3">
         {faqs.map((faq, i) => (
-          <div key={i} className="border border-manto-border rounded-xl overflow-hidden">
+          <div key={i} className="border border-gray-200 rounded-xl overflow-hidden">
             <button onClick={() => setOpen(open === i ? null : i)} className="w-full flex items-center justify-between p-5 text-left cursor-pointer">
-              <span className="font-semibold text-manto-white">{faq.q}</span>
-              <ChevronDown className={`w-5 h-5 text-manto-gray transition-transform ${open === i ? "rotate-180" : ""}`} />
+              <span className="font-semibold text-black">{faq.q}</span>
+              <ChevronDown className={`w-5 h-5 text-gray-600 transition-transform ${open === i ? "rotate-180" : ""}`} />
             </button>
-            {open === i && <div className="px-5 pb-5 text-manto-gray leading-relaxed">{faq.a}</div>}
+            {open === i && <div className="px-5 pb-5 text-gray-600 leading-relaxed">{faq.a}</div>}
           </div>
         ))}
       </div>

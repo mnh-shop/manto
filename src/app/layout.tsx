@@ -8,11 +8,11 @@ import { CartSidebar } from "@/components/cart/CartSidebar";
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "MANTO - Streetwear & Graphic Tees",
-  description: "Bold graphic tees, hoodies, and streetwear. Premium quality, fast shipping. Free shipping over $50.",
+  title: "MANTO - Youth Graphic Tees & Streetwear",
+  description: "Fresh designs for youth culture. Premium graphic tees, hoodies, and streetwear. Free shipping over $50.",
   openGraph: {
-    title: "MANTO - Streetwear & Graphic Tees",
-    description: "Bold graphic tees, hoodies, and streetwear for those who stand out.",
+    title: "MANTO - Youth Graphic Tees & Streetwear",
+    description: "Bold graphic tees and streetwear for the next generation.",
     type: "website",
   },
 };
