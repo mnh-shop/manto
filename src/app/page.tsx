@@ -23,7 +23,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {trustItems.map((item) => (
               <div key={item.label} className="flex items-center gap-3 justify-center">
-                <item.icon className="w-5 h-5 text-manto-neon" />
+                <item.icon className="w-5 h-5 text-gray-900" />
                 <span className="text-sm font-medium text-black">{item.label}</span>
               </div>
             ))}
@@ -32,8 +32,8 @@ export default function HomePage() {
       </section>
       <section className="py-20 bg-yellow-400">
         <div className="max-w-3xl mx-auto text-center px-4">
-          <h2 className="text-3xl font-bold text-black mb-4">Ready to Transform Your Skin?</h2>
-          <p className="text-black/60 mb-8">Join 50,000+ men who upgraded their streetwear routine with MANTO.</p>
+          <h2 className="text-3xl font-bold text-black mb-4">Ready to Transform Your Streetwear?</h2>
+          <p className="text-black/60 mb-8">Join thousands who upgraded their wardrobe with MANTO pixel art tees.</p>
           <a href="/products">
             <Button size="lg">Shop All Products</Button>
           </a>

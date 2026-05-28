@@ -52,7 +52,7 @@ export function Footer() {
 
           {/* Shop */}
           <div>
-            <h4 className="font-semibold text-manto-neon mb-4">Shop</h4>
+            <h4 className="font-semibold text-gray-900 mb-4">Shop</h4>
             <ul className="space-y-2.5">
               {footerLinks.shop.map((link) => (
                 <li key={link.href}>
@@ -66,7 +66,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-semibold text-manto-neon mb-4">Company</h4>
+            <h4 className="font-semibold text-gray-900 mb-4">Company</h4>
             <ul className="space-y-2.5">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
@@ -80,7 +80,7 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="font-semibold text-manto-neon mb-4">Legal</h4>
+            <h4 className="font-semibold text-gray-900 mb-4">Legal</h4>
             <ul className="space-y-2.5">
               {footerLinks.legal.map((link) => (
                 <li key={link.href}>

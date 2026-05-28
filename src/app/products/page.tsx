@@ -18,7 +18,7 @@ export default function ProductsPage() {
         {categories.map((cat) => (
           <button key={cat.id} onClick={() => setActiveCategory(cat.id)}
             className={`px-4 py-2 rounded-xl text-sm font-medium transition-all cursor-pointer ${
-              activeCategory === cat.id ? "bg-yellow-400 text-black" : "bg-gray-100 text-black hover:bg-manto-border/50"
+              activeCategory === cat.id ? "bg-yellow-400 text-black" : "bg-gray-100 text-black hover:bg-gray-200/50"
             }`}>
             {cat.name}
           </button>

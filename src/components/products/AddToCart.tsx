@@ -52,7 +52,7 @@ export function AddToCartButton({ product }: AddToCartButtonProps) {
         )}
       </button>
       <Link href="/checkout">
-        <button className="px-6 py-4 rounded-xl font-semibold border-2 border-manto-neon text-black hover:bg-yellow-400 hover:text-manto-black transition-all">
+        <button className="px-6 py-4 rounded-xl font-semibold border-2 border-manto-neon text-black hover:bg-yellow-400 hover:text-gray-800 transition-all">
           Buy Now
         </button>
       </Link>

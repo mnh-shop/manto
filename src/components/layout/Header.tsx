@@ -24,7 +24,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-yellow-400 flex items-center justify-center">
-              <span className="text-manto-neon font-bold text-sm">G</span>
+              <span className="text-gray-900 font-bold text-sm">G</span>
             </div>
             <span className="text-xl font-bold text-black tracking-tight">
               MANTO

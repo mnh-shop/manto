@@ -36,7 +36,7 @@ export function ProductCard({ product }: ProductCardProps) {
       {/* Content */}
       <div className="p-4 space-y-3">
         <Link href={`/products/${product.slug}`}>
-          <h3 className="font-semibold text-black hover:text-manto-neon transition-colors line-clamp-2">
+          <h3 className="font-semibold text-black hover:text-gray-900 transition-colors line-clamp-2">
             {product.name}
           </h3>
         </Link>

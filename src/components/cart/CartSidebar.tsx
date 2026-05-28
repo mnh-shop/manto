@@ -48,13 +48,13 @@ export function CartSidebar() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="font-medium text-sm text-black truncate">{item.name}</h3>
-                  <p className="text-sm font-bold text-manto-neon mt-1">${item.price.toFixed(2)}</p>
+                  <p className="text-sm font-bold text-gray-900 mt-1">${item.price.toFixed(2)}</p>
                   <div className="flex items-center gap-2 mt-2">
-                    <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="p-1 rounded-md hover:bg-manto-border/50 transition-colors">
+                    <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="p-1 rounded-md hover:bg-gray-200/50 transition-colors">
                       <Minus className="w-3 h-3" />
                     </button>
                     <span className="text-sm font-medium w-6 text-center">{item.quantity}</span>
-                    <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="p-1 rounded-md hover:bg-manto-border/50 transition-colors">
+                    <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="p-1 rounded-md hover:bg-gray-200/50 transition-colors">
                       <Plus className="w-3 h-3" />
                     </button>
                     <button onClick={() => removeItem(item.id)} className="ml-auto p-1 text-gray-600 hover:text-red-500 transition-colors">

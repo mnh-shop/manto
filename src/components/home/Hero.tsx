@@ -10,14 +10,14 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left */}
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-400/10 text-manto-neon text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-400/10 text-gray-900 text-sm font-medium">
               <Star className="w-4 h-4 fill-current" />
               <span>#1 Men's Skincare Tools</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black leading-[1.1] tracking-tight">
               Level Up Your{" "}
-              <span className="text-manto-neon">Style</span>
+              <span className="text-gray-900">Style</span>
             </h1>
 
             <p className="text-lg text-gray-600 leading-relaxed max-w-lg">

@@ -68,7 +68,7 @@ export default function CheckoutPage() {
                 ].map((m) => (
                   <button key={m.id} onClick={() => setPaymentMethod(m.id as any)}
                     className={`w-full text-left p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                      paymentMethod === m.id ? "border-manto-gold bg-manto-gold/5" : "border-gray-200 hover:border-manto-neon/30"
+                      paymentMethod === m.id ? "border-gray-300 bg-gray-100/5" : "border-gray-200 hover:border-gray-400/30"
                     }`}>
                     <div className="font-semibold text-black">{m.label}</div>
                     <div className="text-sm text-gray-600">{m.desc}</div>
