@@ -10,19 +10,8 @@ export interface Product {
   badge?: string;
 }
 
-// List of design files from pixel_art_samples
-const designFiles = [
-  "print_design_4.png",
-  "watercolor_formation_1.png",
-  "watercolor_formation_3.png",
-  "watercolor_formation_4.png",
-  "watercolor_formation_5.png",
-  "watercolor_splash_1.png",
-  "watercolor_splash_2.png",
-  "watercolor_splash_3.png",
-  "watercolor_splash_4.png",
-  "watercolor_splash_5.png"
-];
+// Deprecated: previously flat image list; now organized per design.
+const designFiles: string[] = [];
 
 export const products: Product[] = [
   {
@@ -31,14 +20,14 @@ export const products: Product[] = [
     name: "Print Design 4",
     description: "Pixel art design 1",
     price: 24,
-    category: 'tees',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    category: "tees",
+    sizes: ["S", "M", "L", "XL", "XXL"],
     images: [
-      '/images/designs/print_design_4.png',
-      '/images/designs/mockup_1_black_front.png',
-      '/images/designs/mockup_1_black_front.png'
+      "/images/designs/design1/watercolor_splash_1.png",
+      "/images/designs/design1/mockup_1_black_front.png",
+      "/images/designs/design1/mockup_1_white_front.png"
     ],
-    badge: 'Bestseller'
+    badge: "Bestseller"
   },
   {
     id: "watercolor_formation_1",
@@ -46,14 +35,14 @@ export const products: Product[] = [
     name: "Watercolor Formation 1",
     description: "Pixel art design 2",
     price: 26,
-    category: 'tees',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    category: "tees",
+    sizes: ["S", "M", "L", "XL", "XXL"],
     images: [
-      '/images/designs/watercolor_formation_1.png',
-      '/images/designs/mockup_2_black_front.png',
-      '/images/designs/mockup_2_black_front.png'
+      "/images/designs/design2/logo2.png",
+      "/images/designs/design2/mockup_2_black_front.png",
+      "/images/designs/design2/mockup_2_white_front.png"
     ],
-    badge: 'Bestseller'
+    badge: "Bestseller"
   },
   {
     id: "watercolor_formation_3",
@@ -61,14 +50,14 @@ export const products: Product[] = [
     name: "Watercolor Formation 3",
     description: "Pixel art design 3",
     price: 28,
-    category: 'tees',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    category: "tees",
+    sizes: ["S", "M", "L", "XL", "XXL"],
     images: [
-      '/images/designs/watercolor_formation_3.png',
-      '/images/designs/mockup_4_black_front.png',
-      '/images/designs/mockup_4_black_front.png'
+      "/images/designs/design3/logo3.png",
+      "/images/designs/design3/mockup_3_black_front.png",
+      "/images/designs/design3/mockup_3_white_front.png"
     ],
-    badge: 'Bestseller'
+    badge: "Bestseller"
   },
   {
     id: "watercolor_formation_4",
@@ -76,12 +65,13 @@ export const products: Product[] = [
     name: "Watercolor Formation 4",
     description: "Pixel art design 4",
     price: 30,
-    category: 'tees',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    category: "tees",
+    sizes: ["S", "M", "L", "XL", "XXL"],
     images: [
-      '/images/designs/watercolor_formation_4.png',
-      '/images/designs/plain_mockup_5_black_front.png',
-      '/images/designs/plain_mockup_5_black_back.png'
+      "/images/designs/design4/logo4.png",
+      "/images/designs/design4/mockup_4_black_front.png",
+      "/images/designs/design4/mockup_4_white_angled.png",
+      "/images/designs/design4/mockup_4_white_front.png"
     ],
     badge: undefined
   },
@@ -91,12 +81,14 @@ export const products: Product[] = [
     name: "Watercolor Formation 5",
     description: "Pixel art design 5",
     price: 32,
-    category: 'tees',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    category: "tees",
+    sizes: ["S", "M", "L", "XL", "XXL"],
     images: [
-      '/images/designs/watercolor_formation_5.png',
-      '/images/designs/plain_mockup_6_black_front.png',
-      '/images/designs/plain_mockup_6_black_back.png'
+      "/images/designs/design5/logo5.png",
+      "/images/designs/design5/plain_mockup_5_black_back.png",
+      "/images/designs/design5/plain_mockup_5_black_front.png",
+      "/images/designs/design5/plain_mockup_5_white_back.png",
+      "/images/designs/design5/plain_mockup_5_white_front.png"
     ],
     badge: undefined
   },
@@ -106,12 +98,14 @@ export const products: Product[] = [
     name: "Watercolor Splash 1",
     description: "Pixel art design 6",
     price: 34,
-    category: 'tees',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    category: "tees",
+    sizes: ["S", "M", "L", "XL", "XXL"],
     images: [
-      '/images/designs/watercolor_splash_1.png',
-      '/images/designs/mockup_1_black_front.png',
-      '/images/designs/mockup_1_black_front.png'
+      "/images/designs/design6/logo6.png",
+      "/images/designs/design6/plain_mockup_6_black_back.png",
+      "/images/designs/design6/plain_mockup_6_black_front.png",
+      "/images/designs/design6/plain_mockup_6_white_back.png",
+      "/images/designs/design6/plain_mockup_6_white_front.png"
     ],
     badge: undefined
   },
@@ -121,12 +115,14 @@ export const products: Product[] = [
     name: "Watercolor Splash 2",
     description: "Pixel art design 7",
     price: 36,
-    category: 'tees',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    category: "tees",
+    sizes: ["S", "M", "L", "XL", "XXL"],
     images: [
-      '/images/designs/watercolor_splash_2.png',
-      '/images/designs/plain_mockup_7_black_front.png',
-      '/images/designs/plain_mockup_7_black_back.png'
+      "/images/designs/design7/logo7.png",
+      "/images/designs/design7/plain_mockup_7_black_back.png",
+      "/images/designs/design7/plain_mockup_7_black_front.png",
+      "/images/designs/design7/plain_mockup_7_white_back.png",
+      "/images/designs/design7/plain_mockup_7_white_front.png"
     ],
     badge: undefined
   },
@@ -136,12 +132,14 @@ export const products: Product[] = [
     name: "Watercolor Splash 3",
     description: "Pixel art design 8",
     price: 38,
-    category: 'tees',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    category: "tees",
+    sizes: ["S", "M", "L", "XL", "XXL"],
     images: [
-      '/images/designs/watercolor_splash_3.png',
-      '/images/designs/plain_mockup_8_black_front.png',
-      '/images/designs/plain_mockup_8_black_back.png'
+      "/images/designs/design8/logo8.png",
+      "/images/designs/design8/plain_mockup_8_black_back.png",
+      "/images/designs/design8/plain_mockup_8_black_front.png",
+      "/images/designs/design8/plain_mockup_8_white_back.png",
+      "/images/designs/design8/plain_mockup_8_white_front.png"
     ],
     badge: undefined
   },
@@ -151,12 +149,14 @@ export const products: Product[] = [
     name: "Watercolor Splash 4",
     description: "Pixel art design 9",
     price: 40,
-    category: 'tees',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    category: "tees",
+    sizes: ["S", "M", "L", "XL", "XXL"],
     images: [
-      '/images/designs/watercolor_splash_4.png',
-      '/images/designs/plain_mockup_9_black_front.png',
-      '/images/designs/plain_mockup_9_black_back.png'
+      "/images/designs/design9/logo9.png",
+      "/images/designs/design9/plain_mockup_9_black_back.png",
+      "/images/designs/design9/plain_mockup_9_black_front.png",
+      "/images/designs/design9/plain_mockup_9_white_back.png",
+      "/images/designs/design9/plain_mockup_9_white_front.png"
     ],
     badge: undefined
   },
@@ -166,12 +166,13 @@ export const products: Product[] = [
     name: "Watercolor Splash 5",
     description: "Pixel art design 10",
     price: 42,
-    category: 'tees',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    category: "tees",
+    sizes: ["S", "M", "L", "XL", "XXL"],
     images: [
-      '/images/designs/watercolor_splash_5.png',
-      '/images/designs/plain_mockup_10_black_front.png',
-      '/images/designs/plain_mockup_10_black_back.png'
+      "/images/designs/design10/design10.png",
+      "/images/designs/design10/mockup_10_white_front.png",
+      "/images/designs/design10/plain_mockup_10_black_back.png",
+      "/images/designs/design10/plain_mockup_10_black_front.png"
     ],
     badge: undefined
   }
