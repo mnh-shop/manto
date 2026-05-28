@@ -22,7 +22,13 @@ export default async function ProductPage({ params }: Props) {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="grid lg:grid-cols-2 gap-12">
         <div className="aspect-square rounded-2xl bg-gray-100 border border-gray-200 overflow-hidden relative">
-          <Image src={product.images[0]} alt={product.name} fill className="object-contain p-8" priority />
+          <div className="flex overflow-x-auto h-full">
+            {product.images.map((src, i) => (
+              <div key={i} className="relative min-w-full h-full flex-shrink-0">
+                <Image src={src} alt={`${product.name} ${i + 1}`} fill className="object-contain p-8" />
+              </div>
+            ))}
+          </div>
           {product.badge && <div className="absolute top-4 left-4"><Badge>{product.badge}</Badge></div>}
         </div>
         <div className="space-y-6">
