@@ -1,4 +1,3 @@
-
 "use client";
 import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
@@ -23,7 +22,7 @@ export default function ContactPage() {
           <Input label="Subject" placeholder="How can we help?" />
           <div className="space-y-1.5">
             <label className="block text-sm font-medium text-black">Message</label>
-            <textarea rows={5} className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-black placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-manto-gold/50" placeholder="Tell us more..." />
+            <textarea rows={5} className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-black placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500/50" placeholder="Tell us more..." />
           </div>
           <Button size="lg">Send Message</Button>
         </form>

@@ -1,25 +1,24 @@
-
 import { Star } from "lucide-react";
 
 const testimonials = [
   {
     name: "Carlos M.",
     location: "Bogotá, Colombia",
-    text: "The gua sha tool is insane. My jawline looks more defined after just 2 weeks. Actually worth every penny.",
+    text: "The watercolor formation tee is incredible. The print quality is next-level and the fit is perfect. Been wearing it every week since I got it.",
     rating: 5,
     initials: "CM",
   },
   {
     name: "Jake R.",
     location: "Miami, FL",
-    text: "I was skeptical about men's skincare but this starter kit changed my mind. Simple routine, great results.",
+    text: "I've had my MANTO hoodie for six months and it still looks brand new. Heavyweight fabric holds up way better than anything I've worn before.",
     rating: 5,
     initials: "JR",
   },
   {
     name: "Andrés P.",
     location: "Medellín, Colombia",
-    text: "Fast shipping to Colombia and the quality is top-notch. The retinol cream is legit — my skin is smoother already.",
+    text: "Fast shipping to Colombia and the quality is top-notch. The designs are original — you won't see anyone else wearing the same thing.",
     rating: 5,
     initials: "AP",
   },
@@ -31,7 +30,7 @@ export function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-black">What Our Customers Say</h2>
-          <p className="text-gray-600 mt-2">Real results from real people</p>
+          <p className="text-gray-600 mt-2">Real people, real streetwear</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -42,7 +41,7 @@ export function Testimonials() {
                   <Star key={i} className="w-4 h-4 fill-gray-900 text-gray-900" />
                 ))}
               </div>
-              <p className="text-black leading-relaxed mb-4">"{t.text}"</p>
+              <p className="text-black leading-relaxed mb-4">&ldquo;{t.text}&rdquo;</p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-gray-200/10 flex items-center justify-center text-sm font-bold text-gray-900">
                   {t.initials}

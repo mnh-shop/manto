@@ -31,7 +31,7 @@ export function FeaturedProducts() {
         <div className="flex items-end justify-between mb-12">
           <div>
             <h2 className="text-3xl font-bold text-black">Trending Now</h2>
-            <p className="text-gray-600 mt-2">Our best-selling skincare tools & products</p>
+            <p className="text-gray-600 mt-2">Our most popular graphic tees & streetwear</p>
           </div>
           <Link href="/products" className="hidden sm:block">
             <Button variant="ghost">

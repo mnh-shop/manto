@@ -5,9 +5,8 @@ import { Instagram, Twitter, Youtube } from "lucide-react";
 const footerLinks = {
   shop: [
     { href: "/products", label: "All Products" },
-    { href: "/products?cat=tools", label: "Sculpting Tools" },
-    { href: "/products?cat=skincare", label: "Skincare" },
-    { href: "/products?cat=kits", label: "Kits" },
+    { href: "/products?cat=tees", label: "Graphic Tees" },
+    { href: "/products?cat=hoodies", label: "Hoodies" },
   ],
   company: [
     { href: "/about", label: "Our Story" },
@@ -29,13 +28,13 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gray-300 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">G</span>
+              <div className="w-8 h-8 rounded-lg bg-gray-900 flex items-center justify-center">
+                <span className="text-white font-bold text-sm">M</span>
               </div>
               <span className="text-xl font-bold tracking-tight">MANTO</span>
             </div>
             <p className="text-sm text-gray-600 leading-relaxed">
-              Premium skincare tools and products for men who take their routine seriously.
+              Bold graphic tees and streetwear for those who don't follow trends — they set them. Premium prints, heavyweight fabrics.
             </p>
             <div className="flex gap-3">
               <a href="#" className="p-2 rounded-lg bg-white hover:bg-white/10 transition-colors">

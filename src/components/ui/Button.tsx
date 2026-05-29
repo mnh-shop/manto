@@ -24,7 +24,7 @@ export function Button({
             variant === "secondary",
           "bg-transparent text-gray-800 hover:bg-gray-800/5":
             variant === "ghost",
-          "border-2 border-glow-charcoal text-gray-800 hover:bg-gray-800 hover:text-white":
+          "border-2 border-gray-300 text-gray-800 hover:bg-gray-800 hover:text-white":
             variant === "outline",
         },
         {

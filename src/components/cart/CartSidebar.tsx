@@ -34,7 +34,7 @@ export function CartSidebar() {
         <div className="flex-1 overflow-y-auto p-6 space-y-4">
           {items.length === 0 ? (
             <div className="text-center py-12">
-              <ShoppingBag className="w-12 h-12 text-glow-border mx-auto mb-4" />
+              <ShoppingBag className="w-12 h-12 text-gray-300 mx-auto mb-4" />
               <p className="text-gray-600">Your cart is empty</p>
               <Link href="/products">
                 <Button variant="outline" className="mt-4" onClick={closeCart}>Browse Products</Button>

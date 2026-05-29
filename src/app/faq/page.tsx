@@ -1,4 +1,3 @@
-
 "use client";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
@@ -8,8 +7,8 @@ const faqs = [
   { q: "Do you ship to Colombia?", a: "Yes! We ship to all of Colombia via certified carriers. Delivery typically takes 7-10 business days. We accept PSE and Nequi payments through Wompi." },
   { q: "What payment methods do you accept?", a: "We accept credit/debit cards (via Stripe), Wompi (PSE, Nequi for Colombia), and cryptocurrency (BTC, ETH, USDC, USDT, SOL via NOWPayments)." },
   { q: "What is your return policy?", a: "30-day money-back guarantee. If you are not satisfied, contact us for a full refund. Return shipping is free for defective products." },
-  { q: "Are your products authentic?", a: "100%. We source directly from certified manufacturers. Every product comes with quality guarantee." },
-  { q: "How do I use the graphic tee tool?", a: "Apply your favorite serum, then gently scrape the graphic tee from center outward and downward on the neck. Use light pressure. Clean after each use. Tutorial videos included with every order." },
+  { q: "Are the designs original?", a: "100%. Every MANTO design is created by independent artists. We never use stock templates or AI-generated graphics. Each drop is a limited release." },
+  { q: "How do I care for my graphic tee?", a: "Machine wash cold with similar colors, inside out. Tumble dry low or hang dry. Do not bleach. Our 240gsm cotton holds up well, but treating it right will keep the print looking fresh for years." },
   { q: "Can I pay with crypto?", a: "Yes! We accept Bitcoin, Ethereum, USDC, USDT, Solana, and 100+ other cryptocurrencies through NOWPayments." },
 ];
 
