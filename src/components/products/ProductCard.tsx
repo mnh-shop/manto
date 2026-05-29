@@ -54,7 +54,7 @@ export function ProductCard({ product }: ProductCardProps) {
               price: product.price,
               image: product.images[0],
             })}
-            className="p-2.5 rounded-xl bg-yellow-400 text-black hover:bg-yellow-400 hover:text-black transition-all duration-200 active:scale-95"
+            className="p-2.5 rounded-xl bg-gray-300 text-gray-900 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 active:scale-95"
           >
             <ShoppingBag className="w-4 h-4" />
           </button>

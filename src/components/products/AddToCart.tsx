@@ -37,8 +37,8 @@ export function AddToCartButton({ product }: AddToCartButtonProps) {
         onClick={handleAdd}
         className={`flex-1 flex items-center justify-center gap-2 py-4 rounded-xl font-semibold transition-all active:scale-[0.98] ${
           added
-            ? "bg-green-600 text-black"
-            : "bg-yellow-400 text-black hover:bg-yellow-400/90"
+            ? "bg-gray-600 text-white"
+            : "bg-gray-300 text-gray-900 hover:bg-gray-100/90"
         }`}
       >
         {added ? (
@@ -52,7 +52,7 @@ export function AddToCartButton({ product }: AddToCartButtonProps) {
         )}
       </button>
       <Link href="/checkout">
-        <button className="px-6 py-4 rounded-xl font-semibold border-2 border-manto-neon text-black hover:bg-yellow-400 hover:text-gray-800 transition-all">
+        <button className="px-6 py-4 rounded-xl font-semibold border-2 border-gray-300 text-black hover:bg-gray-100 hover:text-gray-800 transition-all">
           Buy Now
         </button>
       </Link>

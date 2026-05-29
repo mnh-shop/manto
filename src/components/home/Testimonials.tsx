@@ -44,7 +44,7 @@ export function Testimonials() {
               </div>
               <p className="text-black leading-relaxed mb-4">"{t.text}"</p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-yellow-400/10 flex items-center justify-center text-sm font-bold text-gray-900">
+                <div className="w-10 h-10 rounded-full bg-gray-200/10 flex items-center justify-center text-sm font-bold text-gray-900">
                   {t.initials}
                 </div>
                 <div>

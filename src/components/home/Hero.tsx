@@ -10,7 +10,7 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left */}
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-400/10 text-gray-900 text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-200/10 text-gray-900 text-sm font-medium">
               <Star className="w-4 h-4 fill-current" />
               <span>#1 Men's Skincare Tools</span>
             </div>
@@ -58,7 +58,7 @@ export function Hero() {
 
           {/* Right — Hero Image */}
           <div className="relative">
-            <div className="aspect-square rounded-3xl bg-gradient-to-br from-manto-neon/20 to-manto-dark overflow-hidden flex items-center justify-center">
+            <div className="aspect-square rounded-3xl bg-gradient-to-br from-manto-dark/10 to-manto-black/20 overflow-hidden flex items-center justify-center">
               <div className="text-center p-8">
                 <div className="text-8xl mb-4">✨</div>
                 <p className="text-black/60 font-medium">Streetwear Drops</p>
@@ -67,7 +67,7 @@ export function Hero() {
             {/* Floating card */}
             <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl p-4 border border-gray-200">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center text-lg">✓</div>
+                <div className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center text-lg">✓</div>
                 <div>
                   <div className="font-semibold text-sm text-black">In Stock</div>
                   <div className="text-xs text-gray-600">Ships in 24h</div>

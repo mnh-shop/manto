@@ -12,7 +12,6 @@ const config: Config = {
         manto: {
           black: "#0A0A0A",
           dark: "#111111",
-          neon: "#39FF14",
           blue: "#00D4FF",
           red: "#FF3333",
           white: "#FFFFFF",

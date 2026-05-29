@@ -23,8 +23,8 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-yellow-400 flex items-center justify-center">
-              <span className="text-gray-900 font-bold text-sm">G</span>
+            <div className="w-8 h-8 rounded-lg bg-gray-300 flex items-center justify-center">
+              <span className="text-white font-bold text-sm">G</span>
             </div>
             <span className="text-xl font-bold text-black tracking-tight">
               MANTO
@@ -55,7 +55,7 @@ export function Header() {
             >
               <ShoppingBag className="w-5 h-5 text-black/60" />
               {itemCount() > 0 && (
-                <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-yellow-500 text-black text-[10px] font-bold flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-gray-400 text-white text-[10px] font-bold flex items-center justify-center">
                   {itemCount()}
                 </span>
               )}

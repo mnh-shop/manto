@@ -29,8 +29,8 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-yellow-500 flex items-center justify-center">
-                <span className="text-gray-800 font-bold text-sm">G</span>
+              <div className="w-8 h-8 rounded-lg bg-gray-300 flex items-center justify-center">
+                <span className="text-white font-bold text-sm">G</span>
               </div>
               <span className="text-xl font-bold tracking-tight">MANTO</span>
             </div>
