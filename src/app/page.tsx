@@ -1,4 +1,5 @@
 
+import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
 import { FeaturedProducts } from "@/components/home/FeaturedProducts";
 import { Testimonials } from "@/components/home/Testimonials";
@@ -34,9 +35,9 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto text-center px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Streetwear?</h2>
           <p className="text-gray-600 mb-8">Join thousands who upgraded their wardrobe with MANTO pixel art tees.</p>
-          <a href="/products">
+          <Link href={"/products"}>
             <Button size="lg">Shop All Products</Button>
-          </a>
+          </Link>
         </div>
       </section>
     </>

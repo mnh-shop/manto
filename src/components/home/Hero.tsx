@@ -21,7 +21,7 @@ export function Hero() {
             </h1>
 
             <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-              Bold graphic tees and streetwear for those who don't follow trends — they set them. Premium prints, heavyweight fabrics, made to stand out.
+              Bold graphic tees and streetwear for those who don&apos;t follow trends — they set them. Premium prints, heavyweight fabrics, made to stand out.
             </p>
 
             <div className="flex flex-wrap gap-4">

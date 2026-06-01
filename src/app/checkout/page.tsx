@@ -5,6 +5,7 @@ import { useCartStore } from "@/lib/store";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import Image from "next/image";
+import Link from "next/link";
 import { Lock, CreditCard } from "lucide-react";
 
 export default function CheckoutPage() {
@@ -18,7 +19,7 @@ export default function CheckoutPage() {
     return (
       <div className="max-w-2xl mx-auto px-4 py-20 text-center">
         <h1 className="text-2xl font-bold text-black mb-4">Your cart is empty</h1>
-        <a href="/products"><Button>Browse Products</Button></a>
+        <Link href="/products"><Button>Browse Products</Button></Link>
       </div>
     );
   }
@@ -29,7 +30,7 @@ export default function CheckoutPage() {
         <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6 text-3xl">OK</div>
         <h1 className="text-2xl font-bold text-black mb-4">Order Confirmed!</h1>
         <p className="text-gray-600 mb-8">Thank you for your order. You will receive a confirmation email shortly.</p>
-        <a href="/products"><Button>Continue Shopping</Button></a>
+        <Link href="/products"><Button>Continue Shopping</Button></Link>
       </div>
     );
   }

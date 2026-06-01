@@ -1,17 +1,5 @@
-import { defineConfig, globalIgnores } from "eslint/config";
-import nextPlugin from "eslint-config-next";
+import nextConfig from "eslint-config-next";
 
-const eslintConfig = defineConfig([
-  {
-    name: "nextjs",
-    extends: ["next/core-web-vitals", "next/typescript"],
-  },
-  globalIgnores([
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
-  ]),
-]);
+const eslintConfig = [...nextConfig];
 
 export default eslintConfig;

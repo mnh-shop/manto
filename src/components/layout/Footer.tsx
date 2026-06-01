@@ -34,7 +34,7 @@ export function Footer() {
               <span className="text-xl font-bold tracking-tight">MANTO</span>
             </div>
             <p className="text-sm text-gray-600 leading-relaxed">
-              Bold graphic tees and streetwear for those who don't follow trends — they set them. Premium prints, heavyweight fabrics.
+              Bold graphic tees and streetwear for those who don&apos;t follow trends — they set them. Premium prints, heavyweight fabrics.
             </p>
             <div className="flex gap-3">
               <a href="#" className="p-2 rounded-lg bg-white hover:bg-white/10 transition-colors">
