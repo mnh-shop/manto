@@ -4,7 +4,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ShoppingBag } from "lucide-react";
-import { Badge } from "@/components/ui/Input";
+import { Badge } from "@/components/ui/Badge";
 import { cn } from "@/lib/utils";
 import { products, type Product } from "@/data/products";
 import { useCartStore } from "@/lib/store";
@@ -17,7 +17,7 @@ export function ProductCard({ product }: ProductCardProps) {
   const addItem = useCartStore((state) => state.addItem);
 
   return (
-    <div className="group relative bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg hover:shadow-gray-500/5 transition-all duration-300">
+    <div className="group relative bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg hover:shadow-manto-blue/5 hover:border-manto-blue/20 transition-all duration-300">
       {/* Image */}
       <Link href={`/products/${product.slug}`} className="block relative aspect-square overflow-hidden">
         <Image
@@ -36,7 +36,7 @@ export function ProductCard({ product }: ProductCardProps) {
       {/* Content */}
       <div className="p-4 space-y-3">
         <Link href={`/products/${product.slug}`}>
-          <h3 className="font-semibold text-black hover:text-gray-900 transition-colors line-clamp-2">
+          <h3 className="font-semibold text-black hover:text-manto-blue transition-colors line-clamp-2">
             {product.name}
           </h3>
         </Link>
@@ -54,7 +54,7 @@ export function ProductCard({ product }: ProductCardProps) {
               price: product.price,
               image: product.images[0],
             })}
-            className="p-2.5 rounded-xl bg-gray-300 text-gray-900 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 active:scale-95"
+            className="p-2.5 rounded-xl bg-manto-blue/10 text-manto-blue hover:bg-manto-blue hover:text-white transition-all duration-200 active:scale-95"
           >
             <ShoppingBag className="w-4 h-4" />
           </button>

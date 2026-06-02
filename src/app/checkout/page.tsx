@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import Image from "next/image";
 import Link from "next/link";
-import { Lock, CreditCard } from "lucide-react";
+import { Lock, CreditCard, Zap } from "lucide-react";
 
 export default function CheckoutPage() {
   const { items, total, clearCart } = useCartStore();
@@ -27,7 +27,9 @@ export default function CheckoutPage() {
   if (step === "success") {
     return (
       <div className="max-w-2xl mx-auto px-4 py-20 text-center">
-        <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6 text-3xl">OK</div>
+        <div className="w-16 h-16 rounded-full bg-manto-blue/10 flex items-center justify-center mx-auto mb-6">
+          <Zap className="w-8 h-8 text-manto-blue" />
+        </div>
         <h1 className="text-2xl font-bold text-black mb-4">Order Confirmed!</h1>
         <p className="text-gray-600 mb-8">Thank you for your order. You will receive a confirmation email shortly.</p>
         <Link href="/products"><Button>Continue Shopping</Button></Link>
@@ -37,6 +39,8 @@ export default function CheckoutPage() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      {/* Accent bar */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-manto-blue via-manto-red to-manto-blue" />
       <h1 className="text-3xl font-bold text-black mb-8">Checkout</h1>
       <div className="grid lg:grid-cols-5 gap-12">
         {/* Form */}
@@ -69,7 +73,7 @@ export default function CheckoutPage() {
                 ].map((m) => (
                   <button key={m.id} onClick={() => setPaymentMethod(m.id as any)}
                     className={`w-full text-left p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                      paymentMethod === m.id ? "border-gray-300 bg-gray-100/5" : "border-gray-200 hover:border-gray-400/30"
+                      paymentMethod === m.id ? "border-manto-blue bg-manto-blue/5" : "border-gray-200 hover:border-manto-blue/30"
                     }`}>
                     <div className="font-semibold text-black">{m.label}</div>
                     <div className="text-sm text-gray-600">{m.desc}</div>
@@ -77,7 +81,7 @@ export default function CheckoutPage() {
                 ))}
               </div>
               {paymentMethod === "stripe" && (
-                <div className="p-4 rounded-xl bg-gray-100 border border-gray-200 space-y-4">
+                <div className="p-4 rounded-xl bg-gray-50 border border-gray-200 space-y-4">
                   <Input label="Card Number" placeholder="4242 4242 4242 4242" />
                   <div className="grid grid-cols-2 gap-4">
                     <Input label="Expiry" placeholder="MM/YY" />
@@ -86,12 +90,12 @@ export default function CheckoutPage() {
                 </div>
               )}
               {paymentMethod === "wompi" && (
-                <div className="p-4 rounded-xl bg-gray-100 border border-gray-200">
+                <div className="p-4 rounded-xl bg-gray-50 border border-gray-200">
                   <p className="text-sm text-gray-600">You will be redirected to Wompi to complete your payment securely via PSE, Nequi, or card.</p>
                 </div>
               )}
               {paymentMethod === "crypto" && (
-                <div className="p-4 rounded-xl bg-gray-100 border border-gray-200">
+                <div className="p-4 rounded-xl bg-gray-50 border border-gray-200">
                   <p className="text-sm text-gray-600">You will be shown a crypto payment address. Send the exact amount and your order will be confirmed automatically.</p>
                 </div>
               )}
@@ -107,12 +111,12 @@ export default function CheckoutPage() {
 
         {/* Order Summary */}
         <div className="lg:col-span-2">
-          <div className="bg-gray-100 rounded-2xl p-6 sticky top-24">
+          <div className="bg-gray-50 rounded-2xl p-6 sticky top-24 border border-gray-200">
             <h3 className="font-semibold text-black mb-4">Order Summary</h3>
             <div className="space-y-3 mb-4">
               {items.map((item) => (
                 <div key={item.id} className="flex gap-3">
-                  <div className="relative w-14 h-14 rounded-lg bg-white overflow-hidden flex-shrink-0">
+                  <div className="relative w-14 h-14 rounded-lg bg-white overflow-hidden flex-shrink-0 border border-gray-100">
                     <Image src={item.image} alt={item.name} fill className="object-contain p-1" />
                   </div>
                   <div className="flex-1 min-w-0">

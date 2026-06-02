@@ -1,33 +1,39 @@
+import { Suspense, lazy } from "react";
+import type { Metadata } from "next";
 
-"use client";
-import { useState } from "react";
-import { ProductCard } from "@/components/products/ProductCard";
-import { products, categories } from "@/data/products";
+export const metadata: Metadata = {
+  title: "All Products | MANTO - Youth Graphic Tees & Streetwear",
+  description: "Shop our full collection of graphic tees and streetwear. Premium prints, heavyweight fabrics, fresh designs.",
+};
 
-export default function ProductsPage() {
-  const [activeCategory, setActiveCategory] = useState("all");
-  const filtered = activeCategory === "all" ? products : products.filter((p) => p.category === activeCategory);
+const ProductsContent = lazy(() => import("./ProductsContent"));
 
+function ProductsPageFallback() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-10">
         <h1 className="text-3xl font-bold text-black">All Products</h1>
-        <p className="text-gray-600 mt-2">Premium graphic tees and streetwear</p>
-      </div>
-      <div className="flex flex-wrap gap-3 mb-8">
-        {categories.map((cat) => (
-          <button key={cat.id} onClick={() => setActiveCategory(cat.id)}
-            className={`px-4 py-2 rounded-xl text-sm font-medium transition-all cursor-pointer ${
-              activeCategory === cat.id ? "bg-gray-300 text-gray-900" : "bg-gray-100 text-gray-900 hover:bg-gray-200/50"
-            }`}>
-            {cat.name}
-          </button>
-        ))}
+        <p className="text-gray-600 mt-2">Loading...</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {filtered.map((product) => (<ProductCard key={product.id} product={product} />))}
+        {Array.from({ length: 8 }).map((_, i) => (
+          <div key={i} className="bg-white rounded-2xl border border-gray-200 overflow-hidden animate-pulse">
+            <div className="aspect-square bg-gray-100" />
+            <div className="p-4 space-y-2">
+              <div className="h-4 bg-gray-100 rounded w-3/4" />
+              <div className="h-3 bg-gray-100 rounded w-1/2" />
+            </div>
+          </div>
+        ))}
       </div>
-      {filtered.length === 0 && <div className="text-center py-20"><p className="text-gray-600">No products found.</p></div>}
     </div>
+  );
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={<ProductsPageFallback />}>
+      <ProductsContent />
+    </Suspense>
   );
 }

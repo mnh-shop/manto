@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
 import { FeaturedProducts } from "@/components/home/FeaturedProducts";
 import { Testimonials } from "@/components/home/Testimonials";
+import { Newsletter } from "@/components/home/Newsletter";
 import { Button } from "@/components/ui/Button";
 import { ShieldCheck, Truck, RotateCcw, CreditCard } from "lucide-react";
 
@@ -31,6 +32,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <Newsletter />
       <section className="py-20 bg-gray-50">
         <div className="max-w-3xl mx-auto text-center px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Streetwear?</h2>

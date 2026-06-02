@@ -18,14 +18,14 @@ export function CartSidebar() {
       <div className="fixed inset-0 bg-black/40 z-50" onClick={closeCart} />
 
       {/* Sidebar */}
-      <div className="fixed right-0 top-0 h-full w-full max-w-md bg-gray-100 z-50 shadow-2xl flex flex-col">
+      <div className="fixed right-0 top-0 h-full w-full max-w-md bg-gray-50 z-50 shadow-2xl flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
           <div className="flex items-center gap-3">
-            <ShoppingBag className="w-5 h-5 text-black" />
+            <ShoppingBag className="w-5 h-5 text-manto-blue" />
             <h2 className="text-lg font-bold text-black">Your Cart ({itemCount()})</h2>
           </div>
-          <button onClick={closeCart} className="p-2 rounded-lg hover:bg-white transition-colors">
+          <button onClick={closeCart} className="p-2 rounded-lg hover:bg-gray-200/50 transition-colors cursor-pointer">
             <X className="w-5 h-5 text-black" />
           </button>
         </div>
@@ -42,7 +42,7 @@ export function CartSidebar() {
             </div>
           ) : (
             items.map((item) => (
-              <div key={item.id} className="flex gap-4 p-3 rounded-xl bg-white">
+              <div key={item.id} className="flex gap-4 p-3 rounded-xl bg-white border border-gray-100">
                 <div className="relative w-20 h-20 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
                   <Image src={item.image} alt={item.name} fill className="object-contain p-1" />
                 </div>
@@ -50,14 +50,14 @@ export function CartSidebar() {
                   <h3 className="font-medium text-sm text-black truncate">{item.name}</h3>
                   <p className="text-sm font-bold text-gray-900 mt-1">${item.price.toFixed(2)}</p>
                   <div className="flex items-center gap-2 mt-2">
-                    <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="p-1 rounded-md hover:bg-gray-200/50 transition-colors">
+                    <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="p-1 rounded-md hover:bg-manto-blue/10 transition-colors cursor-pointer">
                       <Minus className="w-3 h-3" />
                     </button>
                     <span className="text-sm font-medium w-6 text-center">{item.quantity}</span>
-                    <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="p-1 rounded-md hover:bg-gray-200/50 transition-colors">
+                    <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="p-1 rounded-md hover:bg-manto-blue/10 transition-colors cursor-pointer">
                       <Plus className="w-3 h-3" />
                     </button>
-                    <button onClick={() => removeItem(item.id)} className="ml-auto p-1 text-gray-600 hover:text-red-500 transition-colors">
+                    <button onClick={() => removeItem(item.id)} className="ml-auto p-1 text-gray-600 hover:text-manto-red transition-colors cursor-pointer">
                       <X className="w-4 h-4" />
                     </button>
                   </div>
@@ -69,7 +69,7 @@ export function CartSidebar() {
 
         {/* Footer */}
         {items.length > 0 && (
-          <div className="p-6 border-t border-gray-200 space-y-4">
+          <div className="p-6 border-t border-gray-200 space-y-4 bg-white">
             <div className="flex justify-between text-sm">
               <span className="text-gray-600">Subtotal</span>
               <span className="font-bold text-black">${total().toFixed(2)}</span>

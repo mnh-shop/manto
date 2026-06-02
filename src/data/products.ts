@@ -15,10 +15,10 @@ const designFiles: string[] = [];
 
 export const products: Product[] = [
   {
-    id: "print_design_4",
-    slug: "print_design_4",
-    name: "Print Design 4",
-    description: "Print Design 4",
+    id: "urban_splash",
+    slug: "urban_splash",
+    name: "Urban Splash",
+    description: "A bold watercolor splash that captures the energy of city streets. Premium heavyweight cotton with vibrant print that won't fade.",
     price: 24,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -30,10 +30,10 @@ export const products: Product[] = [
     badge: "Bestseller"
   },
   {
-    id: "watercolor_formation_1",
-    slug: "watercolor_formation_1",
-    name: "Watercolor Formation 1",
-    description: "Watercolor Formation 1",
+    id: "concrete_bloom",
+    slug: "concrete_bloom",
+    name: "Concrete Bloom",
+    description: "Find beauty in the unexpected. Organic watercolor formations on structured cotton — art that grows on you.",
     price: 26,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -45,10 +45,10 @@ export const products: Product[] = [
     badge: "Bestseller"
   },
   {
-    id: "watercolor_formation_3",
-    slug: "watercolor_formation_3",
-    name: "Watercolor Formation 3",
-    description: "Watercolor Formation 3",
+    id: "neon_drift",
+    slug: "neon_drift",
+    name: "Neon Drift",
+    description: "Let the current carry you. Fluid shapes and electric edges make this tee a statement piece for night riders and day dreamers.",
     price: 28,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -60,10 +60,10 @@ export const products: Product[] = [
     badge: "Bestseller"
   },
   {
-    id: "watercolor_formation_4",
-    slug: "watercolor_formation_4",
-    name: "Watercolor Formation 4",
-    description: "Watercolor Formation 4",
+    id: "shadow_veil",
+    slug: "shadow_veil",
+    name: "Shadow Veil",
+    description: "Mystery meets texture. Layered watercolor tones create depth that shifts in different light. Subtle enough for everyday, bold enough to turn heads.",
     price: 30,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -76,10 +76,10 @@ export const products: Product[] = [
     badge: undefined
   },
   {
-    id: "watercolor_formation_5",
-    slug: "watercolor_formation_5",
-    name: "Watercolor Formation 5",
-    description: "Watercolor Formation 5",
+    id: "midnight_wave",
+    slug: "midnight_wave",
+    name: "Midnight Wave",
+    description: "Deep blues and flowing curves inspired by the ocean at night. A serene, sophisticated design for those who move to their own rhythm.",
     price: 32,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -93,10 +93,10 @@ export const products: Product[] = [
     badge: undefined
   },
   {
-    id: "watercolor_splash_1",
-    slug: "watercolor_splash_1",
-    name: "Watercolor Splash 1",
-    description: "Watercolor Splash 1",
+    id: "vapor_trail",
+    slug: "vapor_trail",
+    name: "Vapor Trail",
+    description: "Inspired by the streaks left behind at full speed. A dynamic watercolor splash that captures motion in pigment.",
     price: 34,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -110,10 +110,10 @@ export const products: Product[] = [
     badge: undefined
   },
   {
-    id: "watercolor_splash_2",
-    slug: "watercolor_splash_2",
-    name: "Watercolor Splash 2",
-    description: "Watercolor Splash 2",
+    id: "electric_fade",
+    slug: "electric_fade",
+    name: "Electric Fade",
+    description: "Bright meets washed — a controlled chaos of color transitions. For those who refuse to blend in.",
     price: 36,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -127,10 +127,10 @@ export const products: Product[] = [
     badge: undefined
   },
   {
-    id: "watercolor_splash_3",
-    slug: "watercolor_splash_3",
-    name: "Watercolor Splash 3",
-    description: "Watercolor Splash 3",
+    id: "ash_and_ember",
+    slug: "ash_and_ember",
+    name: "Ash & Ember",
+    description: "Smoldering tones of charcoal and glow. A watercolor composition that evokes the last light of a fire — raw, warm, disappearing.",
     price: 38,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -144,10 +144,10 @@ export const products: Product[] = [
     badge: undefined
   },
   {
-    id: "watercolor_splash_4",
-    slug: "watercolor_splash_4",
-    name: "Watercolor Splash 4",
-    description: "Watercolor Splash 4",
+    id: "cyan_rush",
+    slug: "cyan_rush",
+    name: "Cyan Rush",
+    description: "Electric cyan explodes across premium cotton — a bold rush of color for the fearless. Part of our signature splash series.",
     price: 40,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -161,10 +161,10 @@ export const products: Product[] = [
     badge: undefined
   },
   {
-    id: "watercolor_splash_5",
-    slug: "watercolor_splash_5",
-    name: "Watercolor Splash 5",
-    description: "Watercolor Splash 5",
+    id: "crimson_break",
+    slug: "crimson_break",
+    name: "Crimson Break",
+    description: "A bold rupture of red and magenta on clean fabric. For moments that demand attention. Limited edition run in our splash collection.",
     price: 42,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "XXL"],

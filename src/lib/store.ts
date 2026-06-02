@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 export interface CartItem {
   id: string;
@@ -7,6 +8,7 @@ export interface CartItem {
   price: number;
   image: string;
   quantity: number;
+  size?: string;
   variant?: string;
 }
 
@@ -24,48 +26,56 @@ interface CartStore {
   itemCount: () => number;
 }
 
-export const useCartStore = create<CartStore>((set, get) => ({
-  items: [],
-  isOpen: false,
+export const useCartStore = create<CartStore>()(
+  persist(
+    (set, get) => ({
+      items: [],
+      isOpen: false,
 
-  addItem: (item) => {
-    const existing = get().items.find((i) => i.id === item.id);
-    if (existing) {
-      set({
-        items: get().items.map((i) =>
-          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
-        ),
-        isOpen: true,
-      });
-    } else {
-      set({ items: [...get().items, { ...item, quantity: 1 }], isOpen: true });
+      addItem: (item) => {
+        const existing = get().items.find((i) => i.id === item.id);
+        if (existing) {
+          set({
+            items: get().items.map((i) =>
+              i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
+            ),
+            isOpen: true,
+          });
+        } else {
+          set({ items: [...get().items, { ...item, quantity: 1 }], isOpen: true });
+        }
+      },
+
+      removeItem: (id) => {
+        set({ items: get().items.filter((i) => i.id !== id) });
+      },
+
+      updateQuantity: (id, quantity) => {
+        if (quantity <= 0) {
+          get().removeItem(id);
+          return;
+        }
+        set({
+          items: get().items.map((i) => (i.id === id ? { ...i, quantity } : i)),
+        });
+      },
+
+      clearCart: () => set({ items: [] }),
+      toggleCart: () => set({ isOpen: !get().isOpen }),
+      openCart: () => set({ isOpen: true }),
+      closeCart: () => set({ isOpen: false }),
+
+      total: () => {
+        return get().items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+      },
+
+      itemCount: () => {
+        return get().items.reduce((sum, item) => sum + item.quantity, 0);
+      },
+    }),
+    {
+      name: "manto-cart",
+      partialize: (state) => ({ items: state.items }),
     }
-  },
-
-  removeItem: (id) => {
-    set({ items: get().items.filter((i) => i.id !== id) });
-  },
-
-  updateQuantity: (id, quantity) => {
-    if (quantity <= 0) {
-      get().removeItem(id);
-      return;
-    }
-    set({
-      items: get().items.map((i) => (i.id === id ? { ...i, quantity } : i)),
-    });
-  },
-
-  clearCart: () => set({ items: [] }),
-  toggleCart: () => set({ isOpen: !get().isOpen }),
-  openCart: () => set({ isOpen: true }),
-  closeCart: () => set({ isOpen: false }),
-
-  total: () => {
-    return get().items.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  },
-
-  itemCount: () => {
-    return get().items.reduce((sum, item) => sum + item.quantity, 0);
-  },
-}));
+  )
+);
